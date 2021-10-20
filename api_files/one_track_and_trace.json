@@ -65,12 +65,13 @@
                     },
                     "api_product_list": {
                       "type": "string",
-                      "example": [
-                        "CARGOTRACKING_STAGE"
-                      ]
+                      "example": "[\"CARGOTRACKING_STAGE\"]"
                     },
                     "api_product_list_json": {
-                      "type": "string",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
                       "example": [
                         "CARGOTRACKING_STAGE"
                       ]

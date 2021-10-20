@@ -18,7 +18,7 @@ import (
 type InlineResponse200 struct {
 	RefreshTokenExpiresIn *string `json:"refresh_token_expires_in,omitempty"`
 	ApiProductList *string `json:"api_product_list,omitempty"`
-	ApiProductListJson *string `json:"api_product_list_json,omitempty"`
+	ApiProductListJson *[]string `json:"api_product_list_json,omitempty"`
 	OrganizationName *string `json:"organization_name,omitempty"`
 	DeveloperEmail *string `json:"developer.email,omitempty"`
 	TokenType *string `json:"token_type,omitempty"`
