@@ -551,8 +551,8 @@ components:
           type: string
         modeOfTransportCode:
           description: A code specifying a type of transport mode.
-          example: "1"
-          type: string
+          example: 1
+          type: integer
       required:
       - UNLocationCode
       - emptyIndicatorCode

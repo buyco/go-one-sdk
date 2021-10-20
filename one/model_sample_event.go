@@ -63,7 +63,7 @@ func (o *SampleEvent) HasEvents() bool {
 	return false
 }
 
-// SetEvents gets a reference to the given []interface{ and assigns it to the Events field.
+// SetEvents gets a reference to the given []interface{} and assigns it to the Events field.
 func (o *SampleEvent) SetEvents(v []interface{}) {
 	o.Events = &v
 }

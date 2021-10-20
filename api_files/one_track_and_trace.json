@@ -627,7 +627,7 @@
                 "description": "Code to denote whether the equipment is empty or laden."
               },
               "modeOfTransportCode": {
-                "type": "string",
+                "type": "integer",
                 "example": 1,
                 "description": "A code specifying a type of transport mode."
               }
