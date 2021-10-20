@@ -497,7 +497,7 @@
                 "description": "An alternative way to capture the facility when no standardized DCSA facility code can be found."
               },
               "modeOfTransportCode": {
-                "type": "string",
+                "type": "integer",
                 "example": 1,
                 "description": "A code specifying a type of transport mode."
               }

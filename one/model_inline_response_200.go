@@ -114,9 +114,9 @@ func (o *InlineResponse200) SetApiProductList(v string) {
 }
 
 // GetApiProductListJson returns the ApiProductListJson field value if set, zero value otherwise.
-func (o *InlineResponse200) GetApiProductListJson() string {
+func (o *InlineResponse200) GetApiProductListJson() []string {
 	if o == nil || o.ApiProductListJson == nil {
-		var ret string
+		var ret []string
 		return ret
 	}
 	return *o.ApiProductListJson
@@ -124,7 +124,7 @@ func (o *InlineResponse200) GetApiProductListJson() string {
 
 // GetApiProductListJsonOk returns a tuple with the ApiProductListJson field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InlineResponse200) GetApiProductListJsonOk() (*string, bool) {
+func (o *InlineResponse200) GetApiProductListJsonOk() (*[]string, bool) {
 	if o == nil || o.ApiProductListJson == nil {
 		return nil, false
 	}
@@ -140,8 +140,8 @@ func (o *InlineResponse200) HasApiProductListJson() bool {
 	return false
 }
 
-// SetApiProductListJson gets a reference to the given string and assigns it to the ApiProductListJson field.
-func (o *InlineResponse200) SetApiProductListJson(v string) {
+// SetApiProductListJson gets a reference to the given []string and assigns it to the ApiProductListJson field.
+func (o *InlineResponse200) SetApiProductListJson(v []string) {
 	o.ApiProductListJson = &v
 }
 

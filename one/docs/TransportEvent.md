@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **UNLocationCode** | **string** | The UN Location Code identifies a location in the sense of a city/a town/a village, being the smaller administrative area existing as defined by the competent national authority in each country. | 
 **FacilityCode** | **string** | The code used for identifying the specific facility. | 
 **OtherFacility** | Pointer to **string** | An alternative way to capture the facility when no standardized DCSA facility code can be found. | [optional] 
-**ModeOfTransportCode** | Pointer to **string** | A code specifying a type of transport mode. | [optional] 
+**ModeOfTransportCode** | Pointer to **int32** | A code specifying a type of transport mode. | [optional] 
 
 ## Methods
 
@@ -263,20 +263,20 @@ HasOtherFacility returns a boolean if a field has been set.
 
 ### GetModeOfTransportCode
 
-`func (o *TransportEvent) GetModeOfTransportCode() string`
+`func (o *TransportEvent) GetModeOfTransportCode() int32`
 
 GetModeOfTransportCode returns the ModeOfTransportCode field if non-nil, zero value otherwise.
 
 ### GetModeOfTransportCodeOk
 
-`func (o *TransportEvent) GetModeOfTransportCodeOk() (*string, bool)`
+`func (o *TransportEvent) GetModeOfTransportCodeOk() (*int32, bool)`
 
 GetModeOfTransportCodeOk returns a tuple with the ModeOfTransportCode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetModeOfTransportCode
 
-`func (o *TransportEvent) SetModeOfTransportCode(v string)`
+`func (o *TransportEvent) SetModeOfTransportCode(v int32)`
 
 SetModeOfTransportCode sets ModeOfTransportCode field to given value.
 
