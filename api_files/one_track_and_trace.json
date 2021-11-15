@@ -497,8 +497,8 @@
                 "description": "An alternative way to capture the facility when no standardized DCSA facility code can be found."
               },
               "modeOfTransportCode": {
-                "type": "integer",
-                "example": 1,
+                "type": "string",
+                "example": "VESSEL",
                 "description": "A code specifying a type of transport mode."
               }
             },
@@ -627,8 +627,8 @@
                 "description": "Code to denote whether the equipment is empty or laden."
               },
               "modeOfTransportCode": {
-                "type": "integer",
-                "example": 1,
+                "type": "string",
+                "example": "VESSEL",
                 "description": "A code specifying a type of transport mode."
               }
             },

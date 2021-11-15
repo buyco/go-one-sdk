@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **FacilityCode** | **string** | The code used for identifying the specific facility. | 
 **OtherFacility** | Pointer to **string** | An alternative way to capture the facility when no standardized DCSA facility code can be found. | [optional] 
 **EmptyIndicatorCode** | **string** | Code to denote whether the equipment is empty or laden. | 
-**ModeOfTransportCode** | Pointer to **int32** | A code specifying a type of transport mode. | [optional] 
+**ModeOfTransportCode** | Pointer to **string** | A code specifying a type of transport mode. | [optional] 
 
 ## Methods
 
@@ -310,20 +310,20 @@ SetEmptyIndicatorCode sets EmptyIndicatorCode field to given value.
 
 ### GetModeOfTransportCode
 
-`func (o *TransportEquipmentEvent) GetModeOfTransportCode() int32`
+`func (o *TransportEquipmentEvent) GetModeOfTransportCode() string`
 
 GetModeOfTransportCode returns the ModeOfTransportCode field if non-nil, zero value otherwise.
 
 ### GetModeOfTransportCodeOk
 
-`func (o *TransportEquipmentEvent) GetModeOfTransportCodeOk() (*int32, bool)`
+`func (o *TransportEquipmentEvent) GetModeOfTransportCodeOk() (*string, bool)`
 
 GetModeOfTransportCodeOk returns a tuple with the ModeOfTransportCode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetModeOfTransportCode
 
-`func (o *TransportEquipmentEvent) SetModeOfTransportCode(v int32)`
+`func (o *TransportEquipmentEvent) SetModeOfTransportCode(v string)`
 
 SetModeOfTransportCode sets ModeOfTransportCode field to given value.
 

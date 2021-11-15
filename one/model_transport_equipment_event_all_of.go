@@ -34,7 +34,7 @@ type TransportEquipmentEventAllOf struct {
 	// Code to denote whether the equipment is empty or laden.
 	EmptyIndicatorCode string `json:"emptyIndicatorCode"`
 	// A code specifying a type of transport mode.
-	ModeOfTransportCode *int32 `json:"modeOfTransportCode,omitempty"`
+	ModeOfTransportCode *string `json:"modeOfTransportCode,omitempty"`
 }
 
 // NewTransportEquipmentEventAllOf instantiates a new TransportEquipmentEventAllOf object
@@ -301,9 +301,9 @@ func (o *TransportEquipmentEventAllOf) SetEmptyIndicatorCode(v string) {
 }
 
 // GetModeOfTransportCode returns the ModeOfTransportCode field value if set, zero value otherwise.
-func (o *TransportEquipmentEventAllOf) GetModeOfTransportCode() int32 {
+func (o *TransportEquipmentEventAllOf) GetModeOfTransportCode() string {
 	if o == nil || o.ModeOfTransportCode == nil {
-		var ret int32
+		var ret string
 		return ret
 	}
 	return *o.ModeOfTransportCode
@@ -311,7 +311,7 @@ func (o *TransportEquipmentEventAllOf) GetModeOfTransportCode() int32 {
 
 // GetModeOfTransportCodeOk returns a tuple with the ModeOfTransportCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *TransportEquipmentEventAllOf) GetModeOfTransportCodeOk() (*int32, bool) {
+func (o *TransportEquipmentEventAllOf) GetModeOfTransportCodeOk() (*string, bool) {
 	if o == nil || o.ModeOfTransportCode == nil {
 		return nil, false
 	}
@@ -327,8 +327,8 @@ func (o *TransportEquipmentEventAllOf) HasModeOfTransportCode() bool {
 	return false
 }
 
-// SetModeOfTransportCode gets a reference to the given int32 and assigns it to the ModeOfTransportCode field.
-func (o *TransportEquipmentEventAllOf) SetModeOfTransportCode(v int32) {
+// SetModeOfTransportCode gets a reference to the given string and assigns it to the ModeOfTransportCode field.
+func (o *TransportEquipmentEventAllOf) SetModeOfTransportCode(v string) {
 	o.ModeOfTransportCode = &v
 }
 

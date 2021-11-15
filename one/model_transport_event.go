@@ -39,7 +39,7 @@ type TransportEvent struct {
 	// An alternative way to capture the facility when no standardized DCSA facility code can be found.
 	OtherFacility *string `json:"otherFacility,omitempty"`
 	// A code specifying a type of transport mode.
-	ModeOfTransportCode *int32 `json:"modeOfTransportCode,omitempty"`
+	ModeOfTransportCode *string `json:"modeOfTransportCode,omitempty"`
 }
 
 // NewTransportEvent instantiates a new TransportEvent object
@@ -342,9 +342,9 @@ func (o *TransportEvent) SetOtherFacility(v string) {
 }
 
 // GetModeOfTransportCode returns the ModeOfTransportCode field value if set, zero value otherwise.
-func (o *TransportEvent) GetModeOfTransportCode() int32 {
+func (o *TransportEvent) GetModeOfTransportCode() string {
 	if o == nil || o.ModeOfTransportCode == nil {
-		var ret int32
+		var ret string
 		return ret
 	}
 	return *o.ModeOfTransportCode
@@ -352,7 +352,7 @@ func (o *TransportEvent) GetModeOfTransportCode() int32 {
 
 // GetModeOfTransportCodeOk returns a tuple with the ModeOfTransportCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *TransportEvent) GetModeOfTransportCodeOk() (*int32, bool) {
+func (o *TransportEvent) GetModeOfTransportCodeOk() (*string, bool) {
 	if o == nil || o.ModeOfTransportCode == nil {
 		return nil, false
 	}
@@ -368,8 +368,8 @@ func (o *TransportEvent) HasModeOfTransportCode() bool {
 	return false
 }
 
-// SetModeOfTransportCode gets a reference to the given int32 and assigns it to the ModeOfTransportCode field.
-func (o *TransportEvent) SetModeOfTransportCode(v int32) {
+// SetModeOfTransportCode gets a reference to the given string and assigns it to the ModeOfTransportCode field.
+func (o *TransportEvent) SetModeOfTransportCode(v string) {
 	o.ModeOfTransportCode = &v
 }
 

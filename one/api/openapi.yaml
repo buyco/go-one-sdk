@@ -440,8 +440,8 @@ components:
           type: string
         modeOfTransportCode:
           description: A code specifying a type of transport mode.
-          example: 1
-          type: integer
+          example: VESSEL
+          type: string
       required:
       - UNLocationCode
       - facilityCode
@@ -551,8 +551,8 @@ components:
           type: string
         modeOfTransportCode:
           description: A code specifying a type of transport mode.
-          example: 1
-          type: integer
+          example: VESSEL
+          type: string
       required:
       - UNLocationCode
       - emptyIndicatorCode
