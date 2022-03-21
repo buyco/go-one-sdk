@@ -2,7 +2,7 @@
 
 [![GoDoc](https://godoc.org/github.com/buyco/go-one-sdk?status.svg)](http://godoc.org/github.com/buyco/go-one-sdk) [![Go Report Card](https://goreportcard.com/badge/github.com/buyco/go-one-sdk)](https://goreportcard.com/report/github.com/buyco/go-msc-sdk) [![license](https://img.shields.io/github/license/buyco/go-one-sdk.svg)](https://github.com/buyco/go-one-sdk/LICENSE)
 
-SDK built to use MSC APIs
+SDK built to use ONE APIs
 
 ## What is done ?
 
