@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RefreshTokenExpiresIn** | Pointer to **string** |  | [optional] 
 **ApiProductList** | Pointer to **string** |  | [optional] 
-**ApiProductListJson** | Pointer to **[]string** |  | [optional] 
+**ApiProductListJson** | Pointer to **string** |  | [optional] 
 **OrganizationName** | Pointer to **string** |  | [optional] 
 **DeveloperEmail** | Pointer to **string** |  | [optional] 
 **TokenType** | Pointer to **string** |  | [optional] 
@@ -90,20 +90,20 @@ HasApiProductList returns a boolean if a field has been set.
 
 ### GetApiProductListJson
 
-`func (o *InlineResponse200) GetApiProductListJson() []string`
+`func (o *InlineResponse200) GetApiProductListJson() string`
 
 GetApiProductListJson returns the ApiProductListJson field if non-nil, zero value otherwise.
 
 ### GetApiProductListJsonOk
 
-`func (o *InlineResponse200) GetApiProductListJsonOk() (*[]string, bool)`
+`func (o *InlineResponse200) GetApiProductListJsonOk() (*string, bool)`
 
 GetApiProductListJsonOk returns a tuple with the ApiProductListJson field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApiProductListJson
 
-`func (o *InlineResponse200) SetApiProductListJson(v []string)`
+`func (o *InlineResponse200) SetApiProductListJson(v string)`
 
 SetApiProductListJson sets ApiProductListJson field to given value.
 
