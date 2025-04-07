@@ -23,39 +23,39 @@ import (
 type EventsAPI interface {
 
 	/*
-		GetEvents Find events by type, Booking Reference, Bill of Lading or Equipment Reference.
+			GetEvents Find events by type, Booking Reference, Bill of Lading or Equipment Reference.
 
-		# Best Practice Guidelines for API Client Configuration
+			# Best Practice Guidelines for API Client Configuration
 
-	**To ensure the efficient and accurate retrieval of container tracking information via the ONE DCSA Track and Trace v2.2 API, we recommend the following configuration settings for your API client.**
+		**To ensure the efficient and accurate retrieval of container tracking information via the ONE DCSA Track and Trace v2.2 API, we recommend the following configuration settings for your API client.**
 
-	### 1. Number of Containers:
-	It is anticipated that a significant number of containers, potentially reaching several thousand, may be in active transit within your system, requiring continuous tracking and status updates.
+		### 1. Number of Containers:
+		It is anticipated that a significant number of containers, potentially reaching several thousand, may be in active transit within your system, requiring continuous tracking and status updates.
 
-	### 2. API Call Rate: **60 API Calls per Minute**
-	- Our recommendation is that your API polling client should be configured to make **60 API calls per minute**.
-	- This rate limit is established to maintain the responsiveness and reliability of the ONE API service. Exceeding this rate may lead to throttling or delays in response times.
+		### 2. API Call Rate: **60 API Calls per Minute**
+		- Our recommendation is that your API polling client should be configured to make **60 API calls per minute**.
+		- This rate limit is established to maintain the responsiveness and reliability of the ONE API service. Exceeding this rate may lead to throttling or delays in response times.
 
-	### 3. Batch Job Execution:
-	- API consumers who are batching their requests, we recommend scheduling your API client to run **batch jobs up to three times daily** to retrieve tracking information for containers in your system.
-	- **Batch Job API Calls**: Depending on the volume of containers, each batch job may generate several thousand API calls to the ONE server.
+		### 3. Batch Job Execution:
+		- API consumers who are batching their requests, we recommend scheduling your API client to run **batch jobs up to three times daily** to retrieve tracking information for containers in your system.
+		- **Batch Job API Calls**: Depending on the volume of containers, each batch job may generate several thousand API calls to the ONE server.
 
-	### 4. Use of `equipmentReference`:
-	- Although `carrierBookingReference` and `transportDocumentReference` are available, we highly recommend using the **`equipmentReference`** (container number) in your API calls whenever possible.
-	- Using the container number is more efficient in terms of latency, improving response times and reducing processing load.
+		### 4. Use of `equipmentReference`:
+		- Although `carrierBookingReference` and `transportDocumentReference` are available, we highly recommend using the **`equipmentReference`** (container number) in your API calls whenever possible.
+		- Using the container number is more efficient in terms of latency, improving response times and reducing processing load.
 
-	### 5. Error Handling and Retry Mechanisms:
-	- Implement robust error handling and retry mechanisms within your API client to manage potential disruptions in connectivity or response errors.
-	- This will help minimize data retrieval failures and ensure continuous tracking of container movements.
+		### 5. Error Handling and Retry Mechanisms:
+		- Implement robust error handling and retry mechanisms within your API client to manage potential disruptions in connectivity or response errors.
+		- This will help minimize data retrieval failures and ensure continuous tracking of container movements.
 
-	### 6. Data Synchronization:
-	- To avoid data discrepancies, schedule your API calls to align with the frequency of container status updates provided by the ONE system (Transport Plan).
-	- This synchronization will help ensure that the tracking data in your system is up-to-date and accurate.
+		### 6. Data Synchronization:
+		- To avoid data discrepancies, schedule your API calls to align with the frequency of container status updates provided by the ONE system (Transport Plan).
+		- This synchronization will help ensure that the tracking data in your system is up-to-date and accurate.
 
 
 
-		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-		@return ApiGetEventsRequest
+			@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+			@return ApiGetEventsRequest
 	*/
 	GetEvents(ctx context.Context) ApiGetEventsRequest
 

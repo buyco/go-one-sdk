@@ -165,6 +165,11 @@ paths:
                   anyOf:
                     - $ref: '#/components/schemas/transportEvent'
                     - $ref: '#/components/schemas/equipmentEvent'
+                  discriminator:
+                    propertyName: eventType
+                    mapping:
+                      TRANSPORT: '#/components/schemas/transportEvent'
+                      EQUIPMENT: '#/components/schemas/equipmentEvent'
       security:
         - bearerAuth: []
 components:

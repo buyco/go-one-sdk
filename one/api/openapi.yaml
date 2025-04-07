@@ -1218,6 +1218,11 @@ components:
       anyOf:
       - $ref: '#/components/schemas/transportEvent'
       - $ref: '#/components/schemas/equipmentEvent'
+      discriminator:
+        mapping:
+          TRANSPORT: '#/components/schemas/transportEvent'
+          EQUIPMENT: '#/components/schemas/equipmentEvent'
+        propertyName: eventType
       title: Event
     baseTransportEvent_allOf_transportCallID:
       allOf:
