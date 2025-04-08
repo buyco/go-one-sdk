@@ -40,11 +40,10 @@ type TokenAPI interface {
 type TokenAPIService service
 
 type ApiAuthenticateRequest struct {
-	ctx           context.Context
-	ApiService    TokenAPI
-	grantType     *string
-	apikey        *string
-	authorization *string
+	ctx        context.Context
+	ApiService TokenAPI
+	grantType  *string
+	apikey     *string
 }
 
 // client_credentials
@@ -56,11 +55,6 @@ func (r ApiAuthenticateRequest) GrantType(grantType string) ApiAuthenticateReque
 // Client key obtained by registering the app.
 func (r ApiAuthenticateRequest) Apikey(apikey string) ApiAuthenticateRequest {
 	r.apikey = &apikey
-	return r
-}
-
-func (r ApiAuthenticateRequest) Authorization(authorization string) ApiAuthenticateRequest {
-	r.authorization = &authorization
 	return r
 }
 
@@ -110,9 +104,6 @@ func (a *TokenAPIService) AuthenticateExecute(r ApiAuthenticateRequest) (*Inline
 	if r.apikey == nil {
 		return localVarReturnValue, nil, reportError("apikey is required and must be specified")
 	}
-	if r.authorization == nil {
-		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
-	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "grant_type", r.grantType, "form", "")
 	// to determine the Content-Type header
@@ -133,7 +124,6 @@ func (a *TokenAPIService) AuthenticateExecute(r ApiAuthenticateRequest) (*Inline
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "apikey", r.apikey, "simple", "")
-	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

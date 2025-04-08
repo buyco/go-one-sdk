@@ -60,13 +60,6 @@ paths:
         schema:
           type: string
         style: simple
-      - explode: false
-        in: header
-        name: Authorization
-        required: true
-        schema:
-          type: string
-        style: simple
       responses:
         "200":
           content:

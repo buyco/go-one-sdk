@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## Authenticate
 
-> InlineResponse200 Authenticate(ctx).GrantType(grantType).Apikey(apikey).Authorization(authorization).Execute()
+> InlineResponse200 Authenticate(ctx).GrantType(grantType).Apikey(apikey).Execute()
 
 
 
@@ -31,11 +31,10 @@ import (
 func main() {
 	grantType := "client_credentials" // string | client_credentials
 	apikey := "4gH7zKl8WpQeR1v9TnM2XoF6bJsD5iYcU0ArL3" // string | Client key obtained by registering the app.
-	authorization := "authorization_example" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.TokenAPI.Authenticate(context.Background()).GrantType(grantType).Apikey(apikey).Authorization(authorization).Execute()
+	resp, r, err := apiClient.TokenAPI.Authenticate(context.Background()).GrantType(grantType).Apikey(apikey).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `TokenAPI.Authenticate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -58,7 +57,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **grantType** | **string** | client_credentials | 
  **apikey** | **string** | Client key obtained by registering the app. | 
- **authorization** | **string** |  | 
 
 ### Return type
 

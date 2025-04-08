@@ -37,13 +37,6 @@ paths:
           schema:
             type: string
           example: 4gH7zKl8WpQeR1v9TnM2XoF6bJsD5iYcU0ArL3
-        - name: Authorization
-          in: header
-          required: true
-          style: simple
-          explode: false
-          schema:
-            type: string
       responses:
         "200":
           description: OK
