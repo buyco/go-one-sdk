@@ -514,6 +514,7 @@ components:
         - RAIL
         - TRUCK
         - BARGE
+        - FEEDER
     location:
       type: object
       description: |

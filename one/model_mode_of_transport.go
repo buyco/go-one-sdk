@@ -25,6 +25,7 @@ const (
 	RAIL   ModeOfTransport = "RAIL"
 	TRUCK  ModeOfTransport = "TRUCK"
 	BARGE  ModeOfTransport = "BARGE"
+	FEEDER ModeOfTransport = "FEEDER"
 )
 
 // All allowed values of ModeOfTransport enum
@@ -33,6 +34,7 @@ var AllowedModeOfTransportEnumValues = []ModeOfTransport{
 	"RAIL",
 	"TRUCK",
 	"BARGE",
+	"FEEDER",
 }
 
 func (v *ModeOfTransport) UnmarshalJSON(src []byte) error {

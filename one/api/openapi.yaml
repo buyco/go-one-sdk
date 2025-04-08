@@ -638,6 +638,7 @@ components:
       - RAIL
       - TRUCK
       - BARGE
+      - FEEDER
       type: string
     location:
       allOf:
