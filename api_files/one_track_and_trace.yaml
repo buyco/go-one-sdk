@@ -986,8 +986,10 @@ components:
           type: string
           example: "[\"CARGOTRACKING_STAGE\"]"
         api_product_list_json:
-          type: string
-          example: "[\"CARGOTRACKING_STAGE\"]"
+          type: array
+          items:
+            type: string
+          example: ["CARGOTRACKING_STAGE"]
         organization_name:
           type: string
           example: one

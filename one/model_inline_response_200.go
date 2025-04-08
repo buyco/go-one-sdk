@@ -20,20 +20,20 @@ var _ MappedNullable = &InlineResponse200{}
 
 // InlineResponse200 struct for InlineResponse200
 type InlineResponse200 struct {
-	RefreshTokenExpiresIn *string `json:"refresh_token_expires_in,omitempty"`
-	ApiProductList        *string `json:"api_product_list,omitempty"`
-	ApiProductListJson    *string `json:"api_product_list_json,omitempty"`
-	OrganizationName      *string `json:"organization_name,omitempty"`
-	DeveloperEmail        *string `json:"developer.email,omitempty"`
-	TokenType             *string `json:"token_type,omitempty"`
-	IssuedAt              *string `json:"issued_at,omitempty"`
-	ClientId              *string `json:"client_id,omitempty"`
-	AccessToken           *string `json:"access_token,omitempty"`
-	ApplicationName       *string `json:"application_name,omitempty"`
-	Scope                 *string `json:"scope,omitempty"`
-	ExpiresIn             *string `json:"expires_in,omitempty"`
-	RefreshCount          *string `json:"refresh_count,omitempty"`
-	Status                *string `json:"status,omitempty"`
+	RefreshTokenExpiresIn *string  `json:"refresh_token_expires_in,omitempty"`
+	ApiProductList        *string  `json:"api_product_list,omitempty"`
+	ApiProductListJson    []string `json:"api_product_list_json,omitempty"`
+	OrganizationName      *string  `json:"organization_name,omitempty"`
+	DeveloperEmail        *string  `json:"developer.email,omitempty"`
+	TokenType             *string  `json:"token_type,omitempty"`
+	IssuedAt              *string  `json:"issued_at,omitempty"`
+	ClientId              *string  `json:"client_id,omitempty"`
+	AccessToken           *string  `json:"access_token,omitempty"`
+	ApplicationName       *string  `json:"application_name,omitempty"`
+	Scope                 *string  `json:"scope,omitempty"`
+	ExpiresIn             *string  `json:"expires_in,omitempty"`
+	RefreshCount          *string  `json:"refresh_count,omitempty"`
+	Status                *string  `json:"status,omitempty"`
 }
 
 // NewInlineResponse200 instantiates a new InlineResponse200 object
@@ -118,17 +118,17 @@ func (o *InlineResponse200) SetApiProductList(v string) {
 }
 
 // GetApiProductListJson returns the ApiProductListJson field value if set, zero value otherwise.
-func (o *InlineResponse200) GetApiProductListJson() string {
+func (o *InlineResponse200) GetApiProductListJson() []string {
 	if o == nil || IsNil(o.ApiProductListJson) {
-		var ret string
+		var ret []string
 		return ret
 	}
-	return *o.ApiProductListJson
+	return o.ApiProductListJson
 }
 
 // GetApiProductListJsonOk returns a tuple with the ApiProductListJson field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InlineResponse200) GetApiProductListJsonOk() (*string, bool) {
+func (o *InlineResponse200) GetApiProductListJsonOk() ([]string, bool) {
 	if o == nil || IsNil(o.ApiProductListJson) {
 		return nil, false
 	}
@@ -144,9 +144,9 @@ func (o *InlineResponse200) HasApiProductListJson() bool {
 	return false
 }
 
-// SetApiProductListJson gets a reference to the given string and assigns it to the ApiProductListJson field.
-func (o *InlineResponse200) SetApiProductListJson(v string) {
-	o.ApiProductListJson = &v
+// SetApiProductListJson gets a reference to the given []string and assigns it to the ApiProductListJson field.
+func (o *InlineResponse200) SetApiProductListJson(v []string) {
+	o.ApiProductListJson = v
 }
 
 // GetOrganizationName returns the OrganizationName field value if set, zero value otherwise.

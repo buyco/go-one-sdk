@@ -1126,7 +1126,8 @@ components:
       example:
         refresh_token_expires_in: "0"
         api_product_list: "[\"CARGOTRACKING_STAGE\"]"
-        api_product_list_json: "[\"CARGOTRACKING_STAGE\"]"
+        api_product_list_json:
+        - CARGOTRACKING_STAGE
         organization_name: one
         developer.email: ocean_network_express@one-line.com
         token_type: BearerToken
@@ -1146,8 +1147,11 @@ components:
           example: "[\"CARGOTRACKING_STAGE\"]"
           type: string
         api_product_list_json:
-          example: "[\"CARGOTRACKING_STAGE\"]"
-          type: string
+          example:
+          - CARGOTRACKING_STAGE
+          items:
+            type: string
+          type: array
         organization_name:
           example: one
           type: string
