@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EventType** | **string** | The Event Type of the object - to be used as a discriminator.  &lt;b&gt;NB&lt;/b&gt;&amp;#58; This field should be considered Metadata  | 
 **EventClassifierCode** | **string** | Code for the event classifier. Values can vary depending on eventType  | 
-**EventDateTime** | **time.Time** | The local date and time, where the event took place or when the event will take place, in ISO 8601 format. | 
+**EventDateTime** | **string** | The local date and time, where the event took place or when the event will take place, in ISO 8601 format. | 
 **EventID** | Pointer to **string** | The unique identifier for the event (the message - not the source).  &lt;b&gt;NB&lt;/b&gt;&amp;#58; This field should be considered Metadata  | [optional] 
 **EventCreatedDateTime** | **time.Time** | The timestamp of when the event was created.  &lt;b&gt;NB&lt;/b&gt;&amp;#58; This field should be considered Metadata  | 
 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewBaseEvent
 
-`func NewBaseEvent(eventType string, eventClassifierCode string, eventDateTime time.Time, eventCreatedDateTime time.Time, ) *BaseEvent`
+`func NewBaseEvent(eventType string, eventClassifierCode string, eventDateTime string, eventCreatedDateTime time.Time, ) *BaseEvent`
 
 NewBaseEvent instantiates a new BaseEvent object
 This constructor will assign default values to properties that have it defined,
@@ -71,20 +71,20 @@ SetEventClassifierCode sets EventClassifierCode field to given value.
 
 ### GetEventDateTime
 
-`func (o *BaseEvent) GetEventDateTime() time.Time`
+`func (o *BaseEvent) GetEventDateTime() string`
 
 GetEventDateTime returns the EventDateTime field if non-nil, zero value otherwise.
 
 ### GetEventDateTimeOk
 
-`func (o *BaseEvent) GetEventDateTimeOk() (*time.Time, bool)`
+`func (o *BaseEvent) GetEventDateTimeOk() (*string, bool)`
 
 GetEventDateTimeOk returns a tuple with the EventDateTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEventDateTime
 
-`func (o *BaseEvent) SetEventDateTime(v time.Time)`
+`func (o *BaseEvent) SetEventDateTime(v string)`
 
 SetEventDateTime sets EventDateTime field to given value.
 

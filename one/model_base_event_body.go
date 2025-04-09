@@ -15,7 +15,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"time"
 )
 
 // checks if the BaseEventBody type satisfies the MappedNullable interface at compile time
@@ -28,7 +27,7 @@ type BaseEventBody struct {
 	// Code for the event classifier. Values can vary depending on eventType
 	EventClassifierCode string `json:"eventClassifierCode"`
 	// The local date and time, where the event took place or when the event will take place, in ISO 8601 format.
-	EventDateTime time.Time `json:"eventDateTime"`
+	EventDateTime string `json:"eventDateTime"`
 }
 
 type _BaseEventBody BaseEventBody
@@ -37,7 +36,7 @@ type _BaseEventBody BaseEventBody
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBaseEventBody(eventType string, eventClassifierCode string, eventDateTime time.Time) *BaseEventBody {
+func NewBaseEventBody(eventType string, eventClassifierCode string, eventDateTime string) *BaseEventBody {
 	this := BaseEventBody{}
 	this.EventType = eventType
 	this.EventClassifierCode = eventClassifierCode
@@ -102,9 +101,9 @@ func (o *BaseEventBody) SetEventClassifierCode(v string) {
 }
 
 // GetEventDateTime returns the EventDateTime field value
-func (o *BaseEventBody) GetEventDateTime() time.Time {
+func (o *BaseEventBody) GetEventDateTime() string {
 	if o == nil {
-		var ret time.Time
+		var ret string
 		return ret
 	}
 
@@ -113,7 +112,7 @@ func (o *BaseEventBody) GetEventDateTime() time.Time {
 
 // GetEventDateTimeOk returns a tuple with the EventDateTime field value
 // and a boolean to check if the value has been set.
-func (o *BaseEventBody) GetEventDateTimeOk() (*time.Time, bool) {
+func (o *BaseEventBody) GetEventDateTimeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -121,7 +120,7 @@ func (o *BaseEventBody) GetEventDateTimeOk() (*time.Time, bool) {
 }
 
 // SetEventDateTime sets field value
-func (o *BaseEventBody) SetEventDateTime(v time.Time) {
+func (o *BaseEventBody) SetEventDateTime(v string) {
 	o.EventDateTime = v
 }
 

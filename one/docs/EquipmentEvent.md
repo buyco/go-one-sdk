@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **EventCreatedDateTime** | **time.Time** | The timestamp of when the event was created.  &lt;b&gt;NB&lt;/b&gt;&amp;#58; This field should be considered Metadata  | 
 **EventType** | **string** |  | 
 **EventClassifierCode** | **string** | Code for the event classifier can be - PLN (Planned) - ACT (Actual) - EST (Estimated)  | 
-**EventDateTime** | **time.Time** | The local date and time, where the event took place or when the event will take place, in ISO 8601 format. | 
+**EventDateTime** | **string** | The local date and time, where the event took place or when the event will take place, in ISO 8601 format. | 
 **EquipmentEventTypeCode** | [**EquipmentEventTypeCode**](EquipmentEventTypeCode.md) |  | 
 **EquipmentReference** | Pointer to **string** | The unique identifier for the equipment, which should follow the BIC ISO Container Identification Number where possible. According to ISO 6346, a container identification code consists of a 4-letter prefix and a 7-digit number (composed of a 3-letter owner code, a category identifier, a serial number, and a check-digit). If a container does not comply with ISO 6346, it is suggested to follow Recommendation #2 “Container with non-ISO identification” from SMDG.  | [optional] 
 **ISOEquipmentCode** | Pointer to **string** | Unique code for the different equipment size/type used for transporting commodities. The code is a concatenation of ISO Equipment Size Code and ISO Equipment Type Code A and follows the ISO 6346 standard. | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 
 ### NewEquipmentEvent
 
-`func NewEquipmentEvent(eventCreatedDateTime time.Time, eventType string, eventClassifierCode string, eventDateTime time.Time, equipmentEventTypeCode EquipmentEventTypeCode, emptyIndicatorCode EmptyIndicatorCode, ) *EquipmentEvent`
+`func NewEquipmentEvent(eventCreatedDateTime time.Time, eventType string, eventClassifierCode string, eventDateTime string, equipmentEventTypeCode EquipmentEventTypeCode, emptyIndicatorCode EmptyIndicatorCode, ) *EquipmentEvent`
 
 NewEquipmentEvent instantiates a new EquipmentEvent object
 This constructor will assign default values to properties that have it defined,
@@ -127,20 +127,20 @@ SetEventClassifierCode sets EventClassifierCode field to given value.
 
 ### GetEventDateTime
 
-`func (o *EquipmentEvent) GetEventDateTime() time.Time`
+`func (o *EquipmentEvent) GetEventDateTime() string`
 
 GetEventDateTime returns the EventDateTime field if non-nil, zero value otherwise.
 
 ### GetEventDateTimeOk
 
-`func (o *EquipmentEvent) GetEventDateTimeOk() (*time.Time, bool)`
+`func (o *EquipmentEvent) GetEventDateTimeOk() (*string, bool)`
 
 GetEventDateTimeOk returns a tuple with the EventDateTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEventDateTime
 
-`func (o *EquipmentEvent) SetEventDateTime(v time.Time)`
+`func (o *EquipmentEvent) SetEventDateTime(v string)`
 
 SetEventDateTime sets EventDateTime field to given value.
 

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **EventCreatedDateTime** | **time.Time** | The timestamp of when the event was created.  &lt;b&gt;NB&lt;/b&gt;&amp;#58; This field should be considered Metadata  | 
 **EventType** | **string** |  | 
 **EventClassifierCode** | **string** | Code for the event classifier can be - ACT (Actual) - PLN (Planned) - EST (Estimated)  | 
-**EventDateTime** | **time.Time** | The local date and time, where the event took place or when the event will take place, in ISO 8601 format. | 
+**EventDateTime** | **string** | The local date and time, where the event took place or when the event will take place, in ISO 8601 format. | 
 **TransportEventTypeCode** | [**TransportEventTypeCode**](TransportEventTypeCode.md) |  | 
 **DelayReasonCode** | Pointer to **string** | Reason code for the delay. The SMDG-Delay-Reason-Codes are used for this attribute. The code list can be found at http://www.smdg.org/smdg-code-lists/ | [optional] 
 **VesselScheduleChangeRemark** | Pointer to **string** | Free text information provided by the vessel operator regarding the reasons for the change in schedule and/or plans to mitigate schedule slippage.  Deprecated - use changeRemark instead  | [optional] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 
 ### NewTransportEvent
 
-`func NewTransportEvent(eventCreatedDateTime time.Time, eventType string, eventClassifierCode string, eventDateTime time.Time, transportEventTypeCode TransportEventTypeCode, transportCall TransportCall, ) *TransportEvent`
+`func NewTransportEvent(eventCreatedDateTime time.Time, eventType string, eventClassifierCode string, eventDateTime string, transportEventTypeCode TransportEventTypeCode, transportCall TransportCall, ) *TransportEvent`
 
 NewTransportEvent instantiates a new TransportEvent object
 This constructor will assign default values to properties that have it defined,
@@ -125,20 +125,20 @@ SetEventClassifierCode sets EventClassifierCode field to given value.
 
 ### GetEventDateTime
 
-`func (o *TransportEvent) GetEventDateTime() time.Time`
+`func (o *TransportEvent) GetEventDateTime() string`
 
 GetEventDateTime returns the EventDateTime field if non-nil, zero value otherwise.
 
 ### GetEventDateTimeOk
 
-`func (o *TransportEvent) GetEventDateTimeOk() (*time.Time, bool)`
+`func (o *TransportEvent) GetEventDateTimeOk() (*string, bool)`
 
 GetEventDateTimeOk returns a tuple with the EventDateTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEventDateTime
 
-`func (o *TransportEvent) SetEventDateTime(v time.Time)`
+`func (o *TransportEvent) SetEventDateTime(v string)`
 
 SetEventDateTime sets EventDateTime field to given value.
 

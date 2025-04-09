@@ -31,7 +31,7 @@ type EquipmentEvent struct {
 	// Code for the event classifier can be - PLN (Planned) - ACT (Actual) - EST (Estimated)
 	EventClassifierCode string `json:"eventClassifierCode"`
 	// The local date and time, where the event took place or when the event will take place, in ISO 8601 format.
-	EventDateTime          time.Time              `json:"eventDateTime"`
+	EventDateTime          string                 `json:"eventDateTime"`
 	EquipmentEventTypeCode EquipmentEventTypeCode `json:"equipmentEventTypeCode"`
 	// The unique identifier for the equipment, which should follow the BIC ISO Container Identification Number where possible. According to ISO 6346, a container identification code consists of a 4-letter prefix and a 7-digit number (composed of a 3-letter owner code, a category identifier, a serial number, and a check-digit). If a container does not comply with ISO 6346, it is suggested to follow Recommendation #2 “Container with non-ISO identification” from SMDG.
 	EquipmentReference *string `json:"equipmentReference,omitempty"`
@@ -56,7 +56,7 @@ type _EquipmentEvent EquipmentEvent
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewEquipmentEvent(eventCreatedDateTime time.Time, eventType string, eventClassifierCode string, eventDateTime time.Time, equipmentEventTypeCode EquipmentEventTypeCode, emptyIndicatorCode EmptyIndicatorCode) *EquipmentEvent {
+func NewEquipmentEvent(eventCreatedDateTime time.Time, eventType string, eventClassifierCode string, eventDateTime string, equipmentEventTypeCode EquipmentEventTypeCode, emptyIndicatorCode EmptyIndicatorCode) *EquipmentEvent {
 	this := EquipmentEvent{}
 	this.EventCreatedDateTime = eventCreatedDateTime
 	this.EventType = eventType
@@ -180,9 +180,9 @@ func (o *EquipmentEvent) SetEventClassifierCode(v string) {
 }
 
 // GetEventDateTime returns the EventDateTime field value
-func (o *EquipmentEvent) GetEventDateTime() time.Time {
+func (o *EquipmentEvent) GetEventDateTime() string {
 	if o == nil {
-		var ret time.Time
+		var ret string
 		return ret
 	}
 
@@ -191,7 +191,7 @@ func (o *EquipmentEvent) GetEventDateTime() time.Time {
 
 // GetEventDateTimeOk returns a tuple with the EventDateTime field value
 // and a boolean to check if the value has been set.
-func (o *EquipmentEvent) GetEventDateTimeOk() (*time.Time, bool) {
+func (o *EquipmentEvent) GetEventDateTimeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -199,7 +199,7 @@ func (o *EquipmentEvent) GetEventDateTimeOk() (*time.Time, bool) {
 }
 
 // SetEventDateTime sets field value
-func (o *EquipmentEvent) SetEventDateTime(v time.Time) {
+func (o *EquipmentEvent) SetEventDateTime(v string) {
 	o.EventDateTime = v
 }
 
