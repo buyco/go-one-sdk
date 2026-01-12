@@ -805,8 +805,6 @@ components:
         vesselFlag: DE
         vesselOperatorCarrierCode: MAEU
         vesselName: King of the Seas
-      required:
-      - vesselIMONumber
       type: object
     vesselIMONumber:
       description: |
